@@ -1,0 +1,44 @@
+.search_options{
+    padding: 0rem 3rem;
+    margin-bottom: 2rem;
+}
+.search_button{
+    padding: 0rem 3rem;
+    text-align: end;
+}
+.search_button button{
+    border-color: #fff;
+    padding: 0.5rem 2rem;
+    color: #fff;
+}
+
+.search_result{
+    max-height: 48vh;
+    overflow-y: auto;
+}
+.right_author_list_container{
+    display: flex;
+    text-align: left;
+    padding: 1rem 2rem;
+}
+.author{
+    width: 20%;
+}
+.title{
+    width: 50%;
+}
+.user{
+    width: 20%;
+}
+.downloadButton{
+    width: 10%;
+    display: block;
+    text-align: right;
+    color: #fff;
+    padding-top: 0;
+    background: transparent;
+    border: none;
+}
+.error{
+    color: red;
+}

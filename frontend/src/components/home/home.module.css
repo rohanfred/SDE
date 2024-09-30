@@ -1,0 +1,20 @@
+.home{
+    display: flex;
+}
+.left{
+    width: 20%;
+}
+.main{
+    width: 50%;
+}
+.right{
+    width: 30%;
+}
+
+
+/* Media query */
+@media (max-width: 400px){
+    .input_container{
+        margin: 2rem 0;
+    }
+}

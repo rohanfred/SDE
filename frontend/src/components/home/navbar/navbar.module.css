@@ -1,0 +1,20 @@
+.navbar_container{
+    background-color: rgb(41, 56, 56);
+    width: 100%;
+    display: flex;
+}
+.left_navbar{
+    width: 20%;
+    padding: 0rem 1rem;
+    text-align: left;
+}   
+.right_navbar{
+    width: 80%;
+    padding: 1rem 1rem;
+    text-align: right;
+}
+.right_navbar button{
+    color: #fff;
+    font-size: 1rem;
+    padding-top: 0.3rem;
+}

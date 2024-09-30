@@ -1,0 +1,32 @@
+.input_container{
+    margin: 2rem;
+    display: flex;
+    align-items: left;
+}
+.label{
+    width: 15%;
+}
+.input{
+    width: 85%;
+}
+.textField{
+    border: 1px solid #fff;
+    margin-left: 1rem;
+    border-radius: 0.2rem;
+    min-width: 17rem;
+    padding: 0.3rem 1rem;
+    width: 90%;
+}
+.textField input{
+    color: #fff;
+}
+
+
+
+/* Media query */
+@media (max-width: 400px){
+    .textField{
+        min-width: 0;
+        margin-left: 0;
+    }
+}

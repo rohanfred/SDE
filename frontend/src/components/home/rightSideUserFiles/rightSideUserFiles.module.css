@@ -1,0 +1,22 @@
+.right_container{
+    max-height: 91vh;
+    overflow-y: auto;
+}
+.right_author_list_container{
+    display: flex;
+    text-align: left;
+    padding: 1rem 2rem;
+}
+.author{
+    width: 30%;
+}
+.title{
+    width: 70%;
+}
+.lockButton{
+    text-align: right;
+    color: #fff;
+    padding-top: 0;
+    background: transparent;
+    border: none;
+}

@@ -1,0 +1,33 @@
+.search_options{
+    padding: 0rem 3rem;
+    margin-bottom: 2rem;
+}
+.search_button_div{
+    padding: 0rem 3rem;
+    text-align: end;
+}
+.search_button_div button{
+    margin-left: 1rem;
+    border-color: #fff;
+    color: #fff;
+}
+.browse_button{
+    border-color: #fff !important;
+    color: #fff !important;
+    padding: 0.5rem 2rem !important;
+}
+.cross_button{
+    color: #fff;
+    background: transparent;
+    border: none;
+    z-index: 2;
+}
+.upload_button{
+    padding: 0.5rem 2rem !important;
+}
+.error{
+    color: red;
+}
+.success{
+    color: green;
+}
