@@ -1,10 +1,11 @@
 {
     "hosts":{
-        "signup":"http://localhost:8000",
-        "signin":"http://localhost:8000",
-        "upload":"http://localhost:8000",
-        "search":"http://localhost:8000"
+        "signup":"http://swarmloadbalancer-431702091.eu-north-1.elb.amazonaws.com:80",
+        "signin":"http://swarmloadbalancer-431702091.eu-north-1.elb.amazonaws.com:80",
+        "upload":"http://swarmloadbalancer-431702091.eu-north-1.elb.amazonaws.com:80",
+        "search":"http://swarmloadbalancer-431702091.eu-north-1.elb.amazonaws.com:80"
     },
-    "aiolim":30
+    "aiolim":30,
+    "DATABASE_URL": "postgresql://postgres:I4u8alq9ya4q6sl8w#n3kl29q@appdb.cp02oem2oxjx.eu-north-1.rds.amazonaws.com:5432/appdb"
 
 }
