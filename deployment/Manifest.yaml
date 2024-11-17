@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kuberapp
+  labels:
+    app: kuberapp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: kuberapp
+  template:
+    metadata:
+      labels:
+        app: kuberapp
+    spec:
+      containers:
+      - name: kuberapp
+        image: 897722696122.dkr.ecr.eu-north-1.amazonaws.com/iit/apps:latest
+        ports:
+        - containerPort: 8000
+        env:
+        - name: POSTGRES_USER
+          value: 'postgres'
+        - name: POSTGRES_PASSWORD
+          value: '******'
+        - name: POSTGRES_PORT
+          value: '5432'
+        - name: POSTGRES_DB
+          value: 'eksdb'
+        - name: DATABASE_URL
+          value: 'postgresql://postgres:******@appdb.cp02oem2oxjx.eu-north-1.rds.amazonaws.com:5432/eksdb'
+        - name: S3_BUCKET
+          value: 'iiteksproj'
+        - name: AWS_ACCESS_KEY_ID 
+          value: '********'
+        - name: AWS_SECRET_ACCESS_KEY
+          value: '*************s' 
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: kuberapp
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 80
+      targetPort: 8000
+  selector:
+    app: kuberapp 

@@ -1,0 +1,36 @@
+# Use postgres/example user/password credentials
+version: '3.9'
+
+services:
+  application:
+    image: application:latest
+    restart: always
+    deploy:
+      mode: replicated
+      replicas: 3
+    ports:
+      - 80:8000
+   #networks:
+    # - ingress
+    environment:
+     POSTGRES_USER: 'postgres'
+     POSTGRES_PASSWORD: '******'
+     POSTGRES_SERVER: 'appdb.cp02oem2oxjx.eu-north-1.rds.amazonaws.com'
+     POSTGRES_PORT: '5432'
+     POSTGRES_DB: 'appdb'
+     S3_BUCKET: 'iitproj'
+     DATABASE_URL: 'postgresql://postgres:******@appdb.cp02oem2oxjx.eu-north-1.rds.amazonaws.com:5432/appdb'
+     AWS_ACCESS_KEY_ID: '************'
+     AWS_SECRET_ACCESS_KEY: '*********'
+  frontend:
+    image: frontend:latest
+    restart: always
+    deploy:
+      mode: replicated
+      replicas: 3
+    ports:
+      - 8000:80
+    environment:
+     AWS_ACCESS_KEY_ID: '*************'
+     AWS_SECRET_ACCESS_KEY: '*************'
+     S3_BUCKET: 'iitproj'
